@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>自定义滚动条</title>
+	<link rel="stylesheet" href="css/scroll.css" />
+	<style>
+		#box{
+			position: relative;
+			width: 405px;
+			height: 210px;
+			border: 1px solid #ddd;
+			overflow: hidden;
+			margin-left: 200px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="box" class="sl-content-box">
+		<div class="sl-content"></div>
+	</div>
+	<div class="aa"></div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-scroll.js"></script>
+	<script>
+		$("#box").scroll(); 
+		var str='';
+		for(var i=0;i<100;i++){
+			str+='<p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbb</p>'
+		}
+		$("#box .sl-content").html(str);
+		$("#box").scroll('update');
+
+	</script>
+</body>
+</html>
